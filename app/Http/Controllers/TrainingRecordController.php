@@ -12,8 +12,8 @@ class TrainingRecordController extends Controller
      */
     public function index()
     {
-        $record = TrainingRecord::all();
-        return $record;//view('record.index',compact('records'));
+        $records = TrainingRecord::all();
+        return view('training_records.index',compact('records'));
     }
 
     /**

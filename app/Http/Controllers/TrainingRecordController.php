@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TrainingRecord;
 
 class TrainingRecordController extends Controller
 {
@@ -11,7 +12,8 @@ class TrainingRecordController extends Controller
      */
     public function index()
     {
-        //
+        $record = TrainingRecord::all();
+        return $record;//view('record.index',compact('records'));
     }
 
     /**
